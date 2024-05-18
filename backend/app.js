@@ -8,6 +8,7 @@ const transactionRouter = require('./routes/transactionRoutes')
 const userRouter = require('./routes/userRoutes')
 require('dotenv').config();
 
+
 app.use(express.json())
 
 
@@ -20,8 +21,8 @@ app.use((req,res,next)=>{
     console.log("HTTPS Method" + req.method + " , URL" +req.url)
     next();
 })
-app.use("/transactions",transactionRouter)
-app.use("/users",userRouter)
+// app.use("/transactions",transactionRouter)
+// app.use("/users",userRouter)
 
 
 
@@ -40,6 +41,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(port, () => {
+app.listen(8000, () => {
     console.log(`Example app listening on port ${port}`)
 })
