@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const transactionRouter = require('./routes/transactionRoutes')
 const userRouter = require('./routes/userRoutes')
-require('dotenv').config();
+// require('dotenv').config();
 
 
 app.use(express.json())
