@@ -1,6 +1,6 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/app.js", "destination": "/" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
