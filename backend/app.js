@@ -17,10 +17,10 @@ app.use(cors())
 // app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(bodyParser.json());
 
-// app.use((req,res,next)=>{
-//     console.log("HTTPS Method" + req.method + " , URL" +req.url)
-//     next();
-// })
+app.use((req,res,next)=>{
+    console.log("HTTPS Method" + req.method + " , URL" +req.url)
+    next();
+})
 // app.use("/transactions",transactionRouter)
 // app.use("/users",userRouter)
 
@@ -30,10 +30,10 @@ app.use(cors())
 //     console.log("Connected successfully");
 // })
 // mongoose.set('strictQuery', true);
-// mongoose.connect("mongodb+srv://mokshkukreja999:moksh90@cluster0.frzozja.mongodb.net/expense?retryWrites=true&w=majority&appName=Cluster0", () => {
-//     console.log("Connected successfully");
-// })
-// mongoose.set('strictQuery', true);
+mongoose.connect("mongodb+srv://mokshkukreja999:moksh90@cluster0.frzozja.mongodb.net/expense?retryWrites=true&w=majority&appName=Cluster0", () => {
+    console.log("Connected successfully");
+})
+mongoose.set('strictQuery', true);
 
 
 
